@@ -127,6 +127,11 @@ const InputBox = styled.div`
 `
 
 function App() {
+  // total bill amount
+  //amount of people
+  //tip percentage
+
+
   return (
     <Styles>
       <MainCalculator> 
@@ -135,9 +140,9 @@ function App() {
            <InputBox></InputBox>
            <p>Select tip %</p>
           <div className="parent">
-            <div className="grid-item" className="div1">5% </div>
-            <div className="grid-item" className="div2">10% </div>
-            <div className="grid-item" className="div3">15% </div>
+            <div onClick={() => console.log("Clicked!")} className="grid-item" className="div1">5% </div>
+            <div  onClick={() => console.log("Clicked!")}className="grid-item" className="div2">10% </div>
+            <div onClick={() => console.log("Clicked!")} className="grid-item" className="div3">15% </div>
             <div className="grid-item" className="div4">25% </div>
             <div className="grid-item" className="div5">30% </div>
             <div className="grid-item" className="div6"> CUSTOM </div>
@@ -155,7 +160,7 @@ function App() {
             <LeftText>Random text</LeftText>
             <Number> $4.79</Number>
           </TipAmountContainer>
-          <Button> RESET</Button>
+          <Button onClick={() => console.log("Clicked!")}> Calculate </Button>
         </CalculatorRightSide>
       </MainCalculator>
 
