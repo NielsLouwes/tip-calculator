@@ -143,11 +143,7 @@ function App() {
   //   return result;
   // };
 
-  const addFivePercent = (input) => {
-    //take result state and add 5 percent.
-    //return that as result
-    
-  }
+  // handleClick = take in input amount and multiply it by the percentage number of each value of each button
 
 
   return (
@@ -158,12 +154,12 @@ function App() {
            <InputBox></InputBox>
            <p>Select tip %</p>
           <div className="parent">
-            <div onClick={addFivePercent}  className="div1 grid-item">5% </div>
-            <div  onClick={() => console.log("Clicked!")} className="div2 grid-item">10% </div>
-            <div onClick={() => console.log("Clicked!")}  className="div3 grid-item">15% </div>
-            <div className="div4 grid-item">25% </div>
-            <div  className="div5 grid-item">30% </div>
-            <div  className="div6 grid-item"> CUSTOM </div>
+            <div value="5%" className="div1 grid-item">5% </div>
+            <div value="10%" onClick={() => console.log("Clicked!")} className="div2 grid-item">10% </div>
+            <div value="15%" onClick={() => console.log("Clicked!")}  className="div3 grid-item">15% </div>
+            <div value="25%"className="div4 grid-item">25% </div>
+            <div value="30%" className="div5 grid-item">30% </div>
+            <div value="" className="div6 grid-item"> CUSTOM </div>
           </div>
            <p>Number of people</p>
             <InputBox></InputBox>
