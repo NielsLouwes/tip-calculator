@@ -1,12 +1,10 @@
-import './App.css';
-import CalculatorRegular from './pages/CalculatorRegular';
+import "./App.css";
+import CalculatorRegular from "./pages/CalculatorRegular";
 
 function App() {
-
   return (
     <div>
-    <CalculatorRegular />
-
+      <CalculatorRegular />
     </div>
   );
 }

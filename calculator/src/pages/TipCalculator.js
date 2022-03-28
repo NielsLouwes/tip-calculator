@@ -1,6 +1,6 @@
-import './App.css';
-import styled from 'styled-components'
-import { useState } from 'react';
+import "./App.css";
+import styled from "styled-components";
+import { useState } from "react";
 
 const Styles = styled.div`
   display: flex;
@@ -8,15 +8,15 @@ const Styles = styled.div`
   align-items: center;
   height: 100vh;
   width: 100vw;
-`
+`;
 
 const MainCalculator = styled.div`
-  border:  1px red solid;
+  border: 1px red solid;
   width: 800px;
   height: 400px;
   display: flex;
   border-radius: 25px;
-  `
+`;
 
 const CalculatorLeftSide = styled.div`
   width: 46%;
@@ -87,8 +87,7 @@ width: 20%
   border: 1px solid red;
   text-align: center;
 }
-
-  `
+`;
 
 const CalculatorRightSide = styled.div`
   width: 46%;
@@ -96,7 +95,7 @@ const CalculatorRightSide = styled.div`
   border: 1px solid blue;
   border-radius: 25px;
   margin-top: 40px;
-      `
+`;
 
 const TipAmountContainer = styled.div`
   display: flex;
@@ -107,14 +106,10 @@ const TipAmountContainer = styled.div`
   margin-left: 5%;
   margin-top: 25px;
   height: 75px;
-`
-const LeftText = styled.p`
+`;
+const LeftText = styled.p``;
 
-`
-
-const Number = styled.div`
-
-`
+const Number = styled.div``;
 
 const Button = styled.button`
   width: 90%;
@@ -122,7 +117,7 @@ const Button = styled.button`
   margin-top: 50px;
   height: 50px;
   border-radius: 5px;
-`
+`;
 const InputBox = styled.div`
   border: 1px solid blue;
   height: 35px;
@@ -130,11 +125,11 @@ const InputBox = styled.div`
   width: 90%;
   margin-left: 5%;
   margin-bottom: 25px;
-`
+`;
 
 function App() {
   const [result, setResult] = useState;
-   // total bill amount
+  // total bill amount
   //amount of people
   //tip percentage
 
@@ -145,24 +140,44 @@ function App() {
 
   // handleClick = take in input amount and multiply it by the percentage number of each value of each button
 
-
   return (
     <Styles>
-      <MainCalculator> 
+      <MainCalculator>
         <CalculatorLeftSide>
-           <p>Bill</p>
-           <InputBox></InputBox>
-           <p>Select tip %</p>
+          <p>Bill</p>
+          <InputBox></InputBox>
+          <p>Select tip %</p>
           <div className="parent">
-            <div value="5%" className="div1 grid-item">5% </div>
-            <div value="10%" onClick={() => console.log("Clicked!")} className="div2 grid-item">10% </div>
-            <div value="15%" onClick={() => console.log("Clicked!")}  className="div3 grid-item">15% </div>
-            <div value="25%"className="div4 grid-item">25% </div>
-            <div value="30%" className="div5 grid-item">30% </div>
-            <div value="" className="div6 grid-item"> CUSTOM </div>
+            <div value="5%" className="div1 grid-item">
+              5%{" "}
+            </div>
+            <div
+              value="10%"
+              onClick={() => console.log("Clicked!")}
+              className="div2 grid-item"
+            >
+              10%{" "}
+            </div>
+            <div
+              value="15%"
+              onClick={() => console.log("Clicked!")}
+              className="div3 grid-item"
+            >
+              15%{" "}
+            </div>
+            <div value="25%" className="div4 grid-item">
+              25%{" "}
+            </div>
+            <div value="30%" className="div5 grid-item">
+              30%{" "}
+            </div>
+            <div value="" className="div6 grid-item">
+              {" "}
+              CUSTOM{" "}
+            </div>
           </div>
-           <p>Number of people</p>
-            <InputBox></InputBox>
+          <p>Number of people</p>
+          <InputBox></InputBox>
         </CalculatorLeftSide>
 
         <CalculatorRightSide>
@@ -177,7 +192,6 @@ function App() {
           <Button onClick={() => console.log("Clicked!")}> Calculate </Button>
         </CalculatorRightSide>
       </MainCalculator>
-
     </Styles>
   );
 }
